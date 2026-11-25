@@ -15,3 +15,12 @@ no_inicial = (g + h, g, inicio, [inicio])
 fronteira = [no_inicial]
 print('Fronteira no começo:', fronteira)
 
+# ----- PASSO 3: tirar o primeiro nó da fronteira -----
+no = fronteira.pop(0)
+f_atual, g_atual, cidade_atual, caminho = no
+print()
+print('Nó retirado:', no)
+print(' f =', f_atual, '| g =', g_atual, '| cidade =', cidade_atual,
+     '| caminho =', caminho)
+print('Fronteira agora:', fronteira)
+
