@@ -9,3 +9,8 @@
 
 # ----- PASSO 1: importar os dados -----
 from mapa import mapa_romenia, heuristica_bucareste
+
+# ----- PASSO 2: funções de apoio para imprimir -----
+def resumo_fronteira(fronteira):
+  """Texto curto com a fronteira: Cidade(f) separados por vírgula."""
+  return ', '.join(f'{cidade}({f})' for f, g, cidade, caminho in fronteira)
