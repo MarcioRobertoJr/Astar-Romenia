@@ -34,3 +34,12 @@ for cidade in mapa_romenia:
     print(f' {cidade:<15} {quantidade} estrada(s)')
 
 
+# ----- PASSO 7: consultar a heurística -----
+print()
+print('h(Arad) =', heuristica_bucareste['Arad'], 'km em linha reta até Bucareste')
+print('Para cada vizinho de Arad: custo da estrada e h(vizinho)')
+for vizinho, custo in mapa_romenia['Arad']:
+    h = heuristica_bucareste[vizinho]
+    print(f' {vizinho:<10} estrada = {custo:>3} km h = {h:>3} km')
+
+
