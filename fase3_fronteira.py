@@ -44,3 +44,7 @@ print('Fronteira ordenada pelo f (posição 0 da tupla):')
 for item in fronteira:
    print(' ', item)
 
+# ----- PASSO 6: o próximo nó a ser expandido -----
+proximo = fronteira.pop(0)
+print()
+print('Próximo nó a expandir:', proximo[2], 'com f =', proximo[0])
