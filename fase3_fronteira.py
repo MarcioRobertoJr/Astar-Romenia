@@ -37,3 +37,10 @@ print('Fronteira depois de expandir Arad (ordem de inserção):')
 for item in fronteira:
    print(' ', item)
 
+# ----- PASSO 5: ordenar a fronteira pelo f -----
+fronteira.sort(key=lambda no: no[0])
+print()
+print('Fronteira ordenada pelo f (posição 0 da tupla):')
+for item in fronteira:
+   print(' ', item)
+
