@@ -31,3 +31,4 @@ mapa_romenia = {
     'Iasi':           [('Vaslui', 92), ('Neamt', 87)],
     'Neamt':          [('Iasi', 87)],
     }
+
