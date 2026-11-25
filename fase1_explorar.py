@@ -19,3 +19,10 @@ print()
 print('Primeira estrada que sai de Arad:', primeira)
 print(' posição [0] -> cidade vizinha:', primeira[0])
 print(' posição [1] -> custo em km :', primeira[1])
+
+# ----- PASSO 5: percorrer a lista com for e desempacotar -----
+print()
+print('Estradas que saem de Arad:')
+for vizinho, custo in mapa_romenia['Arad']:
+print(' Arad ->', vizinho, '=', custo, 'km')
+
