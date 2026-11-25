@@ -13,3 +13,11 @@ def custo_da_estrada(origem, destino):
        return custo
    return None
 
+ # ----- PASSO 3: função que soma o custo de um caminho inteiro -----
+def custo_do_caminho(caminho):
+   """Recebe uma lista de cidades e devolve a soma das estradas, em km."""
+   total = 0
+   for i in range(len(caminho) - 1):
+    total = total + custo_da_estrada(caminho[i], caminho[i + 1])
+   return total
+
