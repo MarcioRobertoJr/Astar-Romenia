@@ -83,4 +83,7 @@ def main():
          heuristica_bucareste, mostrar=False)
   print(f'{origem:<10} {custo:>4} km ', ' -> '.join(caminho))
 
-  
+# ----- PASSO 5: só roda o main() quando o arquivo é executado direto -----
+if __name__ == '__main__':
+  main()
+
