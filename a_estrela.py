@@ -58,3 +58,29 @@ def busca_a_estrela(inicio, objetivo, grafo, heuristica, mostrar=True):
 
  return None, float('inf')
 
+# ----- PASSO 4: o programa principal -----
+def main():
+ caminho, custo = busca_a_estrela('Arad', 'Bucharest',
+     mapa_romenia, heuristica_bucareste)
+ print()
+ print('--- Resultado ---')
+ if caminho:
+  print('Caminho encontrado:', ' -> '.join(caminho))
+  print(f'Custo real total: {custo} km em {len(caminho) - 1} passos')
+ else:
+  print('Não foi possível encontrar um caminho.')
+
+ # Teste de regressão: o livro diz 418 km em 4 passos.
+ if custo == 418 and len(caminho) - 1 == 4:
+  print('Conferido: igual ao livro (418 km, 4 passos).')
+ else:
+  print('ATENÇÃO: o livro espera 418 km em 4 passos. Revise o código.')
+
+ print()
+ print('--- Outras origens (sem rastro) ---')
+ for origem in ['Timisoara', 'Oradea', 'Craiova', 'Iasi']:
+  caminho, custo = busca_a_estrela(origem, 'Bucharest', mapa_romenia,
+         heuristica_bucareste, mostrar=False)
+  print(f'{origem:<10} {custo:>4} km ', ' -> '.join(caminho))
+
+  
